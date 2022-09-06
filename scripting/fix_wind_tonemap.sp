@@ -12,7 +12,7 @@ public Plugin myinfo =
 	name = "Fix Wind/Tonemap Carryover",
 	author = "Vauff",
 	description = "Fixes env_wind & env_tonemap_controller settings carrying over into other maps",
-	version = "1.0",
+	version = "1.0.1",
 	url = "https://github.com/Vauff/fix_wind_tonemap"
 };
 
@@ -22,7 +22,7 @@ public void OnPluginStart()
 		SetFailState("This plugin only runs on CS:GO!");
 }
 
-public void OnMapEntitiesParsed()
+public void OnMapInit()
 {
 	bool windExists = false;
 	bool tonemapExists = false;
